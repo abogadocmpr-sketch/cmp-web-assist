@@ -13,7 +13,21 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        heading: ['Playfair Display', 'Georgia', 'serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+      },
       colors: {
+        gold: {
+          DEFAULT: "hsl(40 40% 72%)",
+          light: "hsl(40 35% 85%)",
+          dark: "hsl(40 50% 55%)",
+        },
+        navy: {
+          DEFAULT: "hsl(220 45% 20%)",
+          light: "hsl(220 35% 30%)",
+          dark: "hsl(220 45% 12%)",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
