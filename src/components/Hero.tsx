@@ -1,16 +1,22 @@
 import { Scale, ArrowRight } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.jpg";
 
 const Hero = () => (
-  <section id="inicio" className="relative min-h-screen flex items-center">
-    <img
-      src={heroBg}
-      alt="Oficina de abogados"
-      className="absolute inset-0 w-full h-full object-cover"
-      width={1920}
-      height={1080}
-    />
-    <div className="absolute inset-0" style={{ background: "var(--overlay-dark)" }} />
+  <section
+    id="inicio"
+    className="relative min-h-screen flex items-center bg-primary overflow-hidden"
+  >
+    {/* Marca de agua del logo */}
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-0 flex items-center justify-center"
+    >
+      <img
+        src={logo}
+        alt=""
+        className="w-[70vw] max-w-[800px] opacity-[0.04] select-none mix-blend-screen"
+      />
+    </div>
 
     <div className="relative container mx-auto px-4 lg:px-8 pt-24 pb-16">
       <div className="max-w-3xl animate-fade-in-up">
@@ -58,8 +64,13 @@ const Hero = () => (
           { num: "$3.000M+", label: "Recuperados" },
           { num: "100%", label: "Compromiso" },
         ].map((s) => (
-          <div key={s.label} className="text-center border border-primary-foreground/10 rounded-lg p-4 bg-primary/20 backdrop-blur-sm">
-            <div className="font-heading text-2xl md:text-3xl font-bold text-accent">{s.num}</div>
+          <div
+            key={s.label}
+            className="text-center border border-primary-foreground/10 rounded-lg p-4 bg-primary/40 backdrop-blur-sm"
+          >
+            <div className="font-heading text-2xl md:text-3xl font-bold text-accent">
+              {s.num}
+            </div>
             <div className="text-sm text-primary-foreground/60 mt-1">{s.label}</div>
           </div>
         ))}

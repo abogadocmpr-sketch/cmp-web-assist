@@ -16,15 +16,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-md border-b border-gold/20">
       <div className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
-        <a href="#inicio" className="flex items-center gap-3">
+        <a href="#inicio" className="flex items-center">
           <img
             src={logo}
             alt="Patiño & Asociados"
-            className="h-10 w-10 rounded-md bg-primary-foreground object-contain p-0.5"
+            className="h-10 md:h-11 w-auto rounded-md bg-primary-foreground object-contain p-1"
           />
-          <span className="font-heading text-base md:text-lg font-bold text-primary-foreground tracking-wide">
-            PATIÑO <span className="text-accent">&</span> ASOCIADOS
-          </span>
         </a>
 
         {/* Desktop */}
